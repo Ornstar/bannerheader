@@ -1,5 +1,5 @@
 /* =========================
-   RESET JARAK ATAS MOBILE
+   RESET MOBILE
    ========================= */
 @media (max-width: 768px) {
   #scroll_container,
@@ -9,7 +9,6 @@
   .inner-body,
   body.has-apk-download-notification {
     margin: 0 !important;
-    padding: 0 !important;
     top: 0 !important;
   }
 }
@@ -23,7 +22,6 @@
   z-index: 50 !important;
 }
 
-/* background layer */
 .site-header::before {
   content: "";
   position: absolute;
@@ -33,7 +31,6 @@
   background: url("http://plcl.me/images/L9Lp7.png") no-repeat center center / 100% 100%;
 }
 
-/* nav & dropdown tetap di atas */
 .site-header nav,
 .site-header .navbar,
 .site-header .menu,
@@ -51,7 +48,7 @@
 }
 
 /* =========================
-   MOBILE HEADER FIXED
+   MOBILE: HEADER NEMPEL
    ========================= */
 @media (max-width: 768px) {
   .site-header {
@@ -68,13 +65,17 @@
     opacity: 0.95;
   }
 
-  /* jarak konten agar tidak ketiban header */
-  body,
+  /* dorong isi halaman ke bawah agar tidak ketimpa header */
   #scroll_container,
   #scroll_container.inner-body,
   #inner_body_container,
   .inner-body-container,
   .inner-body {
-    padding-top: 70px !important; /* sesuaikan dengan tinggi header */
+    padding-top: 78px !important; /* sesuaikan tinggi header */
+    box-sizing: border-box !important;
+  }
+
+  body.has-apk-download-notification {
+    padding-top: 78px !important;
   }
 }
