@@ -1,0 +1,67 @@
+@media (max-width:768px){
+  #scroll_container,
+  #scroll_container.inner-body,
+  #inner_body_container,
+  .inner-body-container,
+  .inner-body,
+  body.has-apk-download-notification{
+    margin:0!important;
+    padding:0!important;
+    top:0!important;
+  }
+}
+
+.site-header{
+  position:relative!important;
+  overflow:visible!important;
+  z-index:50!important;
+}
+
+.site-header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:url("http://plcl.me/images/L9Lp7.png") no-repeat center center/100% 100%;
+}
+
+.site-header nav,
+.site-header .navbar,
+.site-header .menu,
+.site-header .main-menu,
+.site-header .nav{
+  position:relative!important;
+  z-index:9999!important;
+}
+
+.site-header .dropdown-menu,
+.site-header .sub-menu,
+.site-header .submenu{
+  position:absolute!important;
+  z-index:10000!important;
+}
+
+@media (max-width:768px){
+  .site-header{
+    position:fixed!important;
+    top:0!important;
+    left:0!important;
+    width:100%!important;
+    z-index:99999!important;
+  }
+
+  .site-header::before{
+    background:url("http://plcl.me/images/ZsNpH.png") no-repeat left center/cover;
+    opacity:.95;
+  }
+
+  body,
+  #scroll_container,
+  #scroll_container.inner-body,
+  #inner_body_container,
+  .inner-body-container,
+  .inner-body{
+    padding-top:78px!important;
+  }
+}
