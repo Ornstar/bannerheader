@@ -1,10 +1,10 @@
 /* =========================
-   HEADER DESKTOP DEFAULT
+   HEADER DEFAULT
    ========================= */
 .site-header {
   position: relative !important;
-  overflow: visible !important;
-  z-index: 1 !important;
+  z-index: 50 !important;
+  overflow: hidden !important;
 }
 
 .site-header::before {
@@ -22,18 +22,18 @@
 .site-header .main-menu,
 .site-header .nav {
   position: relative !important;
-  z-index: 1 !important;
+  z-index: 2 !important;
 }
 
 .site-header .dropdown-menu,
 .site-header .sub-menu,
 .site-header .submenu {
   position: absolute !important;
-  z-index: 2 !important;
+  z-index: 9999 !important;
 }
 
 /* =========================
-   MOBILE HEADER DI BELAKANG KONTEN
+   MOBILE FIXED HEADER RAPI
    ========================= */
 @media (max-width: 768px) {
   .site-header {
@@ -42,34 +42,32 @@
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
-    min-height: 100px !important;
-    z-index: 1 !important; /* diturunkan */
-    overflow: visible !important;
+    z-index: 9999 !important;
+    overflow: hidden !important;
   }
 
   .site-header::before {
-    background: url("https://i.postimg.cc/yNHCs6rn/Untitled-design(4).png") no-repeat left center / cover;
+    background: url("https://i.postimg.cc/yNHCs6rn/Untitled-design(4).png") no-repeat center center / cover !important;
     opacity: 0.95;
   }
 
-  /* konten utama dinaikkan di atas header */
+  /* penting: jangan paksa tinggi header terlalu besar */
+  .site-header,
+  .site-header nav,
+  .site-header .navbar {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 72px !important; /* sesuaikan */
+  }
+
+  /* dorong isi ke bawah */
   #scroll_container,
   #scroll_container.inner-body,
   #inner_body_container,
   .inner-body-container,
   .inner-body,
-  .main,
-  .content,
-  .container,
-  .container-fluid,
-  form {
-    position: relative !important;
-    z-index: 10 !important;
-    padding-top: 100px !important;
-    box-sizing: border-box !important;
-  }
-
   body.has-apk-download-notification {
-    padding-top: 100px !important;
+    padding-top: 72px !important;
+    box-sizing: border-box !important;
   }
 }
