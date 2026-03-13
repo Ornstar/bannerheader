@@ -1,73 +1,47 @@
 /* =========================
-   HEADER DEFAULT
+   HEADER GLOBAL
    ========================= */
-.site-header {
+.site-header{
   position: relative !important;
   z-index: 50 !important;
-  overflow: hidden !important;
+  overflow: visible !important;
+  background: url("https://plcl.me/images/7yNEp.png") center center / cover no-repeat !important;
 }
 
-.site-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: url("https://i.postimg.cc/TPGFB7K8/Red-Illustration-Imlek-New-Year-Instagram-Post-(1907-x-96-px)(19).png") no-repeat center center / 100% 100%;
-}
-
+/* isi menu agar tetap di atas background */
+.site-header > *,
 .site-header nav,
 .site-header .navbar,
 .site-header .menu,
 .site-header .main-menu,
-.site-header .nav {
+.site-header .nav{
   position: relative !important;
   z-index: 2 !important;
 }
 
+/* dropdown menu */
 .site-header .dropdown-menu,
 .site-header .sub-menu,
-.site-header .submenu {
+.site-header .submenu{
   position: absolute !important;
   z-index: 9999 !important;
 }
 
 /* =========================
-   MOBILE FIXED HEADER RAPI
+   MOBILE
    ========================= */
-@media (max-width: 768px) {
-  .site-header {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    z-index: 9999 !important;
+@media only screen and (max-width: 768px){
+
+  .inner-body-container > .inner-body,
+  .inner-body{
+    padding-top: 0 !important;
+  }
+
+  .site-header{
+    background: url("https://plcl.me/images/niC7k.png") center center / cover no-repeat !important;
+    min-height: 64px !important;
+    margin-top: 0 !important;
     overflow: hidden !important;
   }
 
-  .site-header::before {
-    background: url("https://i.postimg.cc/yNHCs6rn/Untitled-design(4).png") no-repeat center center / cover !important;
-    opacity: 0.95;
-  }
-
-  /* penting: jangan paksa tinggi header terlalu besar */
-  .site-header,
-  .site-header nav,
-  .site-header .navbar {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: 72px !important; /* sesuaikan */
-  }
-
-  /* dorong isi ke bawah */
-  #scroll_container,
-  #scroll_container.inner-body,
-  #inner_body_container,
-  .inner-body-container,
-  .inner-body,
-  body.has-apk-download-notification {
-    padding-top: 72px !important;
-    box-sizing: border-box !important;
-  }
 }
